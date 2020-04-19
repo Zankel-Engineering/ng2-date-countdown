@@ -111,7 +111,6 @@ export class CountDown {
       .replace('Hours', this.text.Hours + ' | ')
       .replace('Minutes', this.text.Minutes + ' | ')
       .replace('Seconds', this.text.Seconds);
-
     this.displayNumbers = returnNumbers.split('|');
     this.display = this.displayString.split('|');
   }

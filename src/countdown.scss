@@ -1,15 +1,19 @@
 .countdown {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  
+  .container {
+    display: inline-block;
+    margin-right: 5px;
+  }
   .measurements {
-    flex: 0.1;    
-
-    .divider {
-      float: right;
+    text-align: center;
+    &-text {
+      display: inline-block;
     }
-  }  
+    &-number {
+      display: inline-block;
+    }
+    .divider {
+      display: inline-block;
+      width: 1px;
+    }
+  }
 }

@@ -1,12 +1,16 @@
 <div class="countdown">
-  <div *ngFor="let time of display; let i = index" class="measurements {{time}}">
-    <p class="measurements-number">
-      {{ (showZero && displayNumbers[i] < 10) ? '0' + displayNumbers[i].trim() : displayNumbers[i]}}
-    </p>
-    <span *ngIf="display[i+1]" class="divider"> {{divider}} </span>
-    <p class="measurements-text">
-      {{time}}
-    </p>
-  </div>
+  <ng-container *ngFor="let time of display; let i = index">
+    <span class="container" *ngIf="displayNumbers[i].trim() !== '0'">
+      <div class="measurements" [ngClass]="time">
+        <span class="measurements-number">
+          {{ (showZero && displayNumbers[i] < 10) ? '0' + displayNumbers[i].trim() : displayNumbers[i]}}
+        </span>
+        <span class="divider"> {{divider}} </span>
+        <span class="measurements-text">
+          {{time}}
+        </span>
+      </div>
+    </span>
+  </ng-container>
 </div>
 <ng-content></ng-content>
