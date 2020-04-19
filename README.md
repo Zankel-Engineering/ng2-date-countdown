@@ -35,7 +35,7 @@
 
 ## Instalation
 
-`npm install Zankel-Engineering/ng2-date-countdown --save`
+`npm install ng2-date-countdown-inline --save`
 
 In your `app.module`, add `CountdownModule` to your imports:
 
